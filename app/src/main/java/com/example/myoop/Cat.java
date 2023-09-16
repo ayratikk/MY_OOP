@@ -39,4 +39,12 @@ public class Cat extends Animal{
                 + "my breed - " + breed + " and color - " + color);
     }
 
+    public void talk(int age){
+        Log.i("talk()", "Meow! I'm " + age + " years old.");
+    }
+
+    public void talk(String hello){
+        Log.i("talk()", "Meow! " + hello);
+    }
+
 }
