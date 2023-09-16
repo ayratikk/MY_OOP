@@ -9,7 +9,8 @@ public class Cat extends Animal{
     private String color;
 
     public Cat() {
-
+    this.name = "John";
+    this.age = -1;
     }
 
     public Cat(int age, String name) {
@@ -30,7 +31,7 @@ public class Cat extends Animal{
     }
 
     public void talk(){
-        Log.i("talk()", "Hi! My name is " + name + ", and I'm " + age + " years old.");
+        Log.i("talk()", "Meow! I m cat. My name is " + name + ", and I'm " + age + " years old.");
     }
 
     //В методе talk сделать вывод значения этих полей
@@ -40,7 +41,7 @@ public class Cat extends Animal{
     }
 
     public void talk(int age){
-        Log.i("talk()", "Meow! I'm " + age + " years old.");
+        Log.i("talk()", "Meow! I'm cat " + age + " years old.");
     }
 
     public void talk(String hello){

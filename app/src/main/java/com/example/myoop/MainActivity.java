@@ -13,9 +13,15 @@ public class MainActivity extends AppCompatActivity {
 
         Cat vaska = new Cat();
         vaska.talk(3);
-        vaska.talk("Meow, meow!");
-        //Log.i("field age", String.valueOf(vaska.age));
 
+        Puma bagira = new Puma();
+        bagira.talk();
+
+        Cat puma = new Puma();
+        puma.talk();
+
+        Cat murzik = new Lion();
+        murzik.talk();
     }
 
 
