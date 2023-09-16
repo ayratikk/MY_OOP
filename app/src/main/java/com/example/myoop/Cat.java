@@ -33,6 +33,7 @@ public class Cat extends Animal{
         Log.i("talk()", "Hi! My name is " + name + ", and I'm " + age + " years old.");
     }
 
+    //В методе talk сделать вывод значения этих полей
     public void talkAboutBreedAndColor(){
         Log.i("talk()", "Hi! My name is " + name + ", and I'm " + age + " years old, "
                 + "my breed - " + breed + " and color - " + color);
