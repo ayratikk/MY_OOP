@@ -13,7 +13,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Cat vaska = new Cat();
+        Cat cat1 = new Cat();
+        Log.i("numberOfLegs", String.valueOf(cat1.numberOfLegs) + " " + Cat.whatCatsLike());
+
+        Lion lion = new Lion();
+        lion.talk();
+
+       /* Cat vaska = new Cat();
         // vaska.talk(3);
 
         Puma bagira = new Puma();
@@ -50,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             puma2.talk();
         } else {
             Log.i("instanceof", "This is not Puma");
-        }
+        }*/
     }
 
 
