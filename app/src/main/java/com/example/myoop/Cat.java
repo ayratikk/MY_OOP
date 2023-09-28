@@ -9,14 +9,57 @@ public class Cat extends Animal{
     private String breed;
     private String color;
 
+    String helloText;
+    CatMood catMood;
+    private class CatMood{
+        int levelOfMood;
+
+        CatMood(){
+            if(Cat.this.age < 2){
+                levelOfMood = 100;
+            } else if (Cat.this.age >=2 && Cat.this.age <7){
+                levelOfMood = 50;
+            } else if (Cat.this.age >= 7) {
+                levelOfMood = 20;
+            }
+        }
+    }
+
     public Cat() {
     this.name = "John";
     this.age = -1;
-    }
+    catMood = new CatMood();
+    switch(catMood.levelOfMood){
+        case 100:
+            helloText = "Meow! I m happy cat. My name is " + name + ", and I'm " + age + " years old.";
+            break;
+        case 50:
+            helloText = "Meow! I m cat. My name is " + name + ", and I'm " + age + " years old.";
+            break;
+        case 20:
+            helloText = "Meow! I m angry cat! My name is " + name + ", and I'm " + age + " years old.";
+            break;
 
+        }
+
+    }
     public Cat(int age, String name) {
         this.age = age;
         this.name = name;
+
+        catMood= new CatMood();
+        switch(catMood.levelOfMood){
+            case 100:
+                helloText = "Meow! I m happy cat. My name is " + name + ", and I'm " + age + " years old.";
+                break;
+            case 50:
+                helloText = "Meow! I m cat. My name is " + name + ", and I'm " + age + " years old.";
+                break;
+            case 20:
+                helloText = "Meow! I m angry cat! My name is " + name + ", and I'm " + age + " years old.";
+                break;
+
+        }
     }
 
     public Cat(int age, String name, String breed, String color) {
@@ -32,7 +75,7 @@ public class Cat extends Animal{
     }
 
     public void talk(){
-        Log.i("talk()", "Meow! I m cat. My name is " + name + ", and I'm " + age + " years old.");
+        Log.i("talk()", helloText);
     }
 
     //В методе talk сделать вывод значения этих полей
