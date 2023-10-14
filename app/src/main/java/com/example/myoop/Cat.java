@@ -9,6 +9,21 @@ public class Cat extends Animal{
     private String breed;
     private String color;
 
+    static int count = 0;
+    static class CountResetter {
+        boolean moreThan100 = false;
+        CountResetter(){
+            if (Cat.count > 5){
+                moreThan100 = true;
+            }
+            if(moreThan100){
+                resetCount(0);
+            }
+        }
+        void resetCount(int value){
+        Cat.count = value;
+        }
+    }
     String helloText;
     CatMood catMood;
     private class CatMood{
